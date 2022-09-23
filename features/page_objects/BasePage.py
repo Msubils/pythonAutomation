@@ -15,7 +15,7 @@ def send_keys_by_css_selector(self, css_selector, text):
 
 
 def wait_until_element_displayed(self, locator):
-    WebDriverWait(self.driver, 2).until(expected_conditions.visibility_of_element_located(locator))
+    WebDriverWait(self.driver, 10).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, locator)))
 
 
 def wait_until_url_changes(self):
